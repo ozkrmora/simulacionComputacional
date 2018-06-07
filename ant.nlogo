@@ -14,7 +14,7 @@ to setup
   set-default-shape hormigas "bug"
   ask patches [set pcolor white]
   set num-nodos 5
-  set num-hormigas 1
+  set num-hormigas 3
   set alfa 2
   set beta 3
   set evaporacion 0.4
@@ -66,7 +66,8 @@ to buscar
     let aux one-of [link-neighbors] of location
     ;;let new-location max [probabilidad] of [link-neighbors] of location
      show aux
-  moverse fd 1
+
+  moverse fd 0.1
   ]
   tick
 end
@@ -89,6 +90,7 @@ to actualizar-feromona
 end
 
 to moverse
+
   facexy 0 -15;; va siempre a comida directamente, cambiar a nodo coordenada con mayor probabilidad
   ;;if not can-move? 1 [ rt 180 ]
 end
